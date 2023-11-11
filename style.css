@@ -1,0 +1,75 @@
+body{
+	margin:0;
+}
+a{
+	color: inherit; 
+	text-decoration: inherit;
+}
+
+.header{
+	display: flex;
+	justify-content: center;
+	height:20vh;
+	padding-top:10%;
+	width:100%;
+	justify-self: center;
+	background-image: url(./assets/imgs/hero-img.jpg);
+	background-position: center;
+	background-size: cover;
+	color:white;
+}
+.main-options-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: 3%;
+}
+
+.main-option{
+	border-radius: 0.5rem;
+	background:whitesmoke;
+	box-shadow: 10px 5px 5px rgba(0,0,0,0.2);
+	width:30%;
+	min-height:30vh;
+}
+
+.main-option h2{
+	font-weight: 300;
+	font-size: large;
+	margin: 0.2rem;
+}
+
+.main-option p{
+	margin: 0.2rem;
+	font-weight: 100;
+
+}
+
+.main-option-img{
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	width:100%;
+	height:50%;
+	max-height: 400px;
+	object-fit: cover;
+}
+
+.main-option:hover{
+	width:32%;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+	.main-options-container{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.main-option{
+		width:80%;
+		margin:1rem;
+	}
+	.main-option:hover{
+		width:82%;
+	}
+  }
