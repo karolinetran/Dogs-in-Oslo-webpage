@@ -9,14 +9,24 @@ a{
 .header{
 	display: flex;
 	justify-content: center;
-	height:20vh;
-	padding-top:10%;
+	height:25vh;
+	padding-top:5%;
 	width:100%;
 	justify-self: center;
-	background-image: url(./assets/imgs/hero-img.jpg);
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url(./assets/imgs/hero-img.jpg);
 	background-position: center;
 	background-size: cover;
 	color:white;
+	font-size: xx-large;
+	letter-spacing: 0.03rem;
+}
+
+.home-btn{
+	margin-left: 2rem;
+}
+.home-btn:hover{
+	text-decoration: underline;
+	cursor: pointer;
 }
 .main-options-container{
 	display: flex;
@@ -25,27 +35,40 @@ a{
 	margin-top: 3%;
 }
 
-.main-option{
+.secondary-options-container{
+	margin:2rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+  	gap: 20px;
+}
+
+.secondary-options-container .option-box{
+	width:100%;
+	height: 20vh;
+}
+
+.option-box{
 	border-radius: 0.5rem;
 	background:whitesmoke;
 	box-shadow: 10px 5px 5px rgba(0,0,0,0.2);
 	width:30%;
 	min-height:30vh;
+	transition: all .2s ease-in-out; 
 }
 
-.main-option h2{
+.option-box h2{
 	font-weight: 300;
 	font-size: large;
 	margin: 0.2rem;
 }
 
-.main-option p{
+.option-box p{
 	margin: 0.2rem;
 	font-weight: 100;
 
 }
 
-.main-option-img{
+.option-box-img{
 	border-top-left-radius: 0.5rem;
 	border-top-right-radius: 0.5rem;
 	width:100%;
@@ -54,10 +77,16 @@ a{
 	object-fit: cover;
 }
 
-.main-option:hover{
-	width:32%;
+.option-box:hover{
+	transform: scale(1.05); 
 	cursor: pointer;
 }
+
+@media only screen and (max-width: 1000px) {
+	.secondary-options-container{
+		grid-template-columns: repeat(3, 1fr);
+	}
+  }
 
 @media only screen and (max-width: 600px) {
 	.main-options-container{
@@ -65,11 +94,13 @@ a{
 		align-items: center;
 	}
 
-	.main-option{
+	.secondary-options-container{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.main-options-container .option-box{
 		width:80%;
-		margin:1rem;
+		margin:2rem;
 	}
-	.main-option:hover{
-		width:82%;
-	}
+
   }
