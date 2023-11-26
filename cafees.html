@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://kit.fontawesome.com/9bb2be39d1.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,32 +14,88 @@
         <h3>Home</h3>
       </a>
     </div>
-    <div class="secondary-options-container">
-      <div class="option-box">
-        <a href="#">
-          <img src="assets/imgs/cafees.jpg" class="option-box-img">
-          <h2>Cafe 1</h2>
-          <p>textbox</p>
-        </a>
-      </div>
-      <div class="option-box">
-        <a href="#">
-          <img src="assets/imgs/cafees.jpg" class="option-box-img">
-          <h2>Cafe 2</h2>
-          <p>textbox</p>
-        </a>
-      </div>
-      <div class="option-box">
-        <a href="./hotels.html">
-          <img src="assets/imgs/cafees.jpg" class="option-box-img">
-          <h2>Cafe 3</h2>
-          <p>textbox</p>
-        </a>
-      </div>
+    <div class="filter-and-options-container">
+        <div class="filtermenu">
+          <p class="filter-title">filter søk</p>
+          <form id="filter">
+            <p>Servering</p>
+            <div>
+                <input id="innservering" type="checkbox">
+                <label for="innservering">Inneservering</label>
+            </div>
+            <div>
+                <input id="uteservering" type="checkbox">
+                <label for="uteservering">Uteservering</label>
+            </div>
+            <p>Bydel</p>
+            <div>
+                <input id="Alna" type="checkbox">
+                <label for="Alna">Alna</label>
+            </div>
+            <div>
+                <input id="Bjerke" type="checkbox">
+                <label for="Bjerke">Bjerke</label>
+            </div>
+            <div>
+                <input id="Frogner" type="checkbox">
+                <label for="Frogner">Frogner</label>
+            </div>
+            <div>
+                <input id="GamleOslo" type="checkbox">
+                <label for="GamleOslo">Gamle Oslo</label>
+            </div>
+            <div>
+                <input id="Grorud" type="checkbox">
+                <label for="Grorud">Grorud</label>
+            </div>
+            <div>
+                <input id="Grünerløkka" type="checkbox">
+                <label for="Grünerløkka">Grünerløkka</label>
+            </div>
+            <div>
+                <input id="NordreAker" type="checkbox">
+                <label for="NordreAker">Nordre Aker</label>
+            </div>
+            <div>
+                <input id="Nordstrand" type="checkbox">
+                <label for="Nordstrand">Nordstrand</label>
+            </div>
+            <div>
+                <input id="Sagene" type="checkbox">
+                <label for="Sagene">Sagene</label>
+            </div>
+            <div>
+                <input id="StHanshaugen" type="checkbox">
+                <label for="StHanshaugen">St. Hanshaugen</label>
+            </div>
+            <div>
+                <input id="Stovner" type="checkbox">
+                <label for="Stovner">Stovner</label>
+            </div>
+            <div>
+                <input id="SondreNordstrand" type="checkbox">
+                <label for="SondreNordstrand">Søndre Nordstrand</label>
+            </div>
+            <div>
+                <input id="Ullern" type="checkbox">
+                <label for="Ullern">Ullern</label>
+            </div>
+            <div>
+                <input id="VestreAker" type="checkbox">
+                <label for="VestreAker">Vestre Aker</label>
+            </div>
+            <div>
+                <input id="Ostensjo" type="checkbox">
+                <label for="Ostensjo">Østensjø</label>
+            </div>
+          </form>
+        </div>
+        <div id="cafees-container" class="secondary-options-container"> 
+        </div>
     </div>
 
 
 
-    <script src="index.js"></script>
+    <script src="cafees.js"></script>
   </body>
 </html>

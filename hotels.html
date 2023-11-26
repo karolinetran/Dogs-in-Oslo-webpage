@@ -13,30 +13,53 @@
         <h3>Home</h3>
       </a>
     </div>
-    <div class="secondary-options-container">
-      <div class="option-box">
-        <a href="#">
-          <img src="assets/imgs/hotels.jpg" class="option-box-img">
-          <h2>Hotel 1</h2>
-          <p>textbox</p>
-        </a>
+    <div class="filter-and-options-container">
+      <div class="filtermenu">
+        <p class="">filter</p>
+        <form onchange="changeFilter">
+          <div>
+            <input id="innservering" type="checkbox">
+            <label for="innservering">Inneservering</label>
+          </div>
+          <div>
+            <input id="uteservering" type="checkbox">
+            <label for="uteservering">Uteservering</label>
+          </div>
+          <p>Bydel</p>
+          <div>
+            <input id="Øst" type="checkbox">
+            <label for="Øst">Øst</label>
+          </div>
+          <div>
+            <input id="Vest" type="checkbox">
+            <label for="Vest">Vest</label>
+          </div>
+        </form>
       </div>
-      <div class="option-box">
-        <a href="#">
-          <img src="assets/imgs/hotels.jpg" class="option-box-img">
-          <h2>Hotel 2</h2>
-          <p>textbox</p>
-        </a>
-      </div>
-      <div class="option-box">
-        <a href="./hotels.html">
-          <img src="assets/imgs/hotels.jpg" class="option-box-img">
-          <h2>Hotel 3</h2>
-          <p>textbox</p>
-        </a>
+      <div class="secondary-options-container">
+        <div class="option-box">
+          <a href="#">
+            <img src="assets/imgs/hotels.jpg" class="option-box-img">
+            <h2>Hotel 1</h2>
+            <p>textbox</p>
+          </a>
+        </div>
+        <div class="option-box">
+          <a href="#">
+            <img src="assets/imgs/hotels.jpg" class="option-box-img">
+            <h2>Hotel 2</h2>
+            <p>textbox</p>
+          </a>
+        </div>
+        <div class="option-box">
+          <a href="./hotels.html">
+            <img src="assets/imgs/hotels.jpg" class="option-box-img">
+            <h2>Hotel 3</h2>
+            <p>textbox</p>
+          </a>
+        </div>
       </div>
     </div>
-
 
 
     <script src="index.js"></script>
