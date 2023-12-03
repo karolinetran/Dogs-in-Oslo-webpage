@@ -11,53 +11,67 @@ document.addEventListener('DOMContentLoaded', function () {
 // Informasjon om de ulike cafeenen
 const cafesData = [
 	{
-		"name": "Cafe A",
+		"name": "ESPRESSO HOUSE",
 		"location": "Bjerke",
 		"inneservering": true,
 		"uteservering": false,
-		"info": "litt info om plass"
+		"infoShort": "Espresso House er en kafe-kjede som har kafeer i ulike bydeler i Oslo",
+		"info": "Espresso House serverer både varme og kalde drikker, og har i tillegg lett matservering.",
+		"link": "www.side.no"
 	},
 	{
-		"name": "Cafe B",
-		"location": "Frogner",
+		"name": "GRÅBEIN BAR",
+		"location": "Gamle Oslo",
 		"inneservering": true,
 		"uteservering": true,
-		"info": "litt info om plass"
+		"infoShort": "litt info",
+		"info": "litt info om plass",
+		"link": "www.side.no"
 	},
 	{
-		"name": "Cafe C",
+		"name": "STARBUCKS VALKYRIEN",
 		"location": "Frogner",
 		"inneservering": false,
 		"uteservering": true,
-		"info": "litt info om plass"
+		"infoShort": "litt info",
+		"info": "litt info om plass",
+		"link": "www.side.no"
 	},
 	{
-		"name": "Cafe D",
+		"name": "CLOUD CAFE",
 		"location": "Gamle Oslo",
 		"inneservering": true,
 		"uteservering": true,
-		"info": "litt info om plass"
+		"infoShort": "Cloud cafe serverer kaffe og smoothiebowls i koselige lokaler",
+		"info": "litt info om plass",
+		"link": "www.side.no"
 	},
 	{
-		"name": "Cafe E",
+		"name": "PUST KAFE",
 		"location": "Gamle Oslo",
 		"inneservering": true,
 		"uteservering": true,
-		"info": "litt info om plass"
+		"infoShort": "Pust kafe er kafe som ligger rett ved T-banen på Majorstua.",
+		"info": "litt info om plass",
+		"link": "www.side.no"
 	},
 	{
-		"name": "Cafe F",
+		"name": "OSLO MEKANISKE VERKSTED",
 		"location": "Gamle Oslo",
-		"inneservering": true,
+		"inneservering": false,
 		"uteservering": true,
-		"info": "litt info om plass"
+		"infoShort": "Uteplass/bar som tillater hund i uteserveringen",
+		"info": "litt info om plass",
+		"link": "www.side.no"
 	},
 	{
 		"name": "Cafe G",
 		"location": "Gamle Oslo",
 		"inneservering": true,
 		"uteservering": true,
-		"info": "litt info om plass"
+		"infoShort": "litt info",
+		"info": "litt info om plass",
+		"link": "www.side.no"
 	}
 ];
 
@@ -134,7 +148,7 @@ function displayCafes(cafes) {
 		// Legger til innholdet i den nye diven
 		cafeDiv.innerHTML = `
 		<a href="#${cafe.name}">
-			<img src="assets/imgs/cafees.jpg" class="option-box-img">
+			<img src="assets/imgs/cafees/${cafe.name}/1.jpeg" class="option-box-img">
 			<div class="option-box-info-container">
 				<div class="title-location-container">
 					<h2>${cafe.name}</h2>
@@ -147,7 +161,7 @@ function displayCafes(cafes) {
 					${cafe.inneservering ? '<p>inneservering</p>' : ''}
 					${cafe.uteservering ? '<p>uteservering</p>' : ''}
 				</div>
-				<p>${cafe.info}</p>
+				<p>${cafe.infoShort}</p>
 			</div>
 		</a>
 		`;
@@ -156,8 +170,10 @@ function displayCafes(cafes) {
 		<a class="close-modal" href="#"></a>
 			<div>
 				<div class="modal-content">
+					<img src="assets/imgs/cafees/${cafe.name}/1.jpeg" class="modal-img">
 					<h2>${cafe.name}</h2>
 					<p>${cafe.info}</p>
+					<a href=${cafe.link}>${cafe.link}</>
 				</div>
 			</div>
 		`;
