@@ -191,9 +191,20 @@ padding: 0.5rem;
 		grid-template-columns: repeat(1, 2fr);
 	}
 
+	.secondary-options-container .option-box{
+		min-height:250px;
+	}
+
 	.main-options-container .option-box{
 		width:80%;
 		margin:2rem;
+		
+	}
+	.filtermenu{
+		font-size: small;
+	}
+	.filtermenu input{
+		margin-bottom:0.5rem;
 	}
 
   }
