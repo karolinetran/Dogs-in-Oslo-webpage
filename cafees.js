@@ -173,7 +173,7 @@ function displayCafes(cafes) {
 					<img src="assets/imgs/cafees/${cafe.name}/1.jpeg" class="modal-img">
 					<h2>${cafe.name}</h2>
 					<p>${cafe.info}</p>
-					<a href=${cafe.link}>${cafe.link}</>
+					<a class="modal-link" href=${cafe.link}>${cafe.link}</>
 				</div>
 			</div>
 		`;

@@ -144,7 +144,7 @@ function displayhotels(hotels) {
 					<img src="assets/imgs/hotels/${hotel.name}/1.jpeg" class="modal-img">
 					<h2>${hotel.name}</h2>
 					<p>${hotel.info}</p>
-					<a href=${hotel.link}>${hotel.link}</>
+					<a class="modal-link" href=${hotel.link}>${hotel.link}</>
 				</div>
 			</div>
 		`;
