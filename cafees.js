@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-// Informasjon om de ulike cafeenen
+// Information about the different cafees
 const cafesData = [
 	{
 		"name": "ESPRESSO HOUSE",
@@ -24,17 +24,17 @@ const cafesData = [
 		"location": "Gamle Oslo",
 		"inneservering": true,
 		"uteservering": true,
-		"infoShort": "litt info",
-		"info": "litt info om plass",
+		"infoShort": "Gråbein bar ligger på Tøyen og er spesielt hundevennlig!",
+		"info": "Gråbein Bar er en hundevennlig bar som ligger på Tøyen! Her arrangeres quiz og diverse events, i tillegg til at de har både ute og inneservering for deg og din hund!",
 		"link": "www.side.no"
 	},
 	{
 		"name": "STARBUCKS VALKYRIEN",
 		"location": "Frogner",
-		"inneservering": false,
-		"uteservering": true,
-		"infoShort": "litt info",
-		"info": "litt info om plass",
+		"inneservering": true,
+		"uteservering": false,
+		"infoShort": "Starbucks ved Majorstuen serverer kaffe og mat, hunder er velkomne!",
+		"info": "Kafeen ligger sentralt ved Majorstua T-bane.",
 		"link": "www.side.no"
 	},
 	{
@@ -50,7 +50,7 @@ const cafesData = [
 		"name": "PUST KAFE",
 		"location": "Gamle Oslo",
 		"inneservering": true,
-		"uteservering": true,
+		"uteservering": false,
 		"infoShort": "Pust kafe er kafe som ligger rett ved T-banen på Majorstua.",
 		"info": "litt info om plass",
 		"link": "www.side.no"
@@ -63,21 +63,13 @@ const cafesData = [
 		"infoShort": "Uteplass/bar som tillater hund i uteserveringen",
 		"info": "litt info om plass",
 		"link": "www.side.no"
-	},
-	{
-		"name": "Cafe G",
-		"location": "Gamle Oslo",
-		"inneservering": true,
-		"uteservering": true,
-		"infoShort": "litt info",
-		"info": "litt info om plass",
-		"link": "www.side.no"
 	}
+
 ];
 
-// Filtreringsfunksjon
+// Filterfunctions
 function filterCafes () {
-	// Importerer alle checkboksene
+	// Imports all the checkboxes from filtermenu
     const innserveringChecked = document.getElementById('innservering').checked;
     const uteserveringChecked = document.getElementById('uteservering').checked;
     const bydelAlnaChecked = document.getElementById('Alna').checked;
@@ -96,7 +88,7 @@ function filterCafes () {
     const bydelVestreAkerChecked = document.getElementById('VestreAker').checked;
     const bydelOstensjoChecked = document.getElementById('Ostensjo').checked;
 
-    // Sjekker om noen av bydelene er haket av
+    // Checks in any of the districts is checked 
     const anyDistrictChecked =
         bydelAlnaChecked || bydelBjerkeChecked || bydelFrognerChecked || bydelGamleOsloChecked ||
         bydelGrorudChecked || bydelGrünerløkkaChecked || bydelNordreAkerChecked || bydelNordstrandChecked ||
@@ -129,23 +121,23 @@ function filterCafes () {
 			!anyDistrictChecked
 		)
 	);
-	// Viser frem de filtrerte kafeene			
+	// Displays the filtered cafees 			
     displayCafes(filteredCafes);
 }
 
-// Funksjon for å vise cafeene
+// Function to show the cafees 
 function displayCafes(cafes) {
-	cafesContainer.innerHTML = ''; // Fjerner tidligere elementer
+	cafesContainer.innerHTML = ''; // Removes the previous elements 
 
 	cafes.forEach(cafe => {
-		// Lager ny div for hver cafe
+		// Makes a new div for each cafe 
 		const cafeDiv = document.createElement('div');
 		const cafeModal = document.createElement('div');
-		cafeDiv.className = 'option-box'; // Legger på classen "option-box"
+		cafeDiv.className = 'option-box'; // Adds the class "option-box""
 		cafeModal.className = "info-modal";
 		cafeModal.id = `${cafe.name}`;
 
-		// Legger til innholdet i den nye diven
+		// Adds the content in the new div
 		cafeDiv.innerHTML = `
 		<a href="#${cafe.name}">
 			<img src="assets/imgs/cafees/${cafe.name}/1.jpeg" class="option-box-img">
@@ -165,7 +157,7 @@ function displayCafes(cafes) {
 			</div>
 		</a>
 		`;
-
+		// Creates the modal for the cafe
 		cafeModal.innerHTML = `
 		<a class="close-modal" href="#"></a>
 			<div>
@@ -178,7 +170,7 @@ function displayCafes(cafes) {
 			</div>
 		`;
 
-		// Legger den nye diven i cafesContainer
+		// Adds in the new div and modal in the Cafe Container
 		cafesContainer.appendChild(cafeDiv);
 		cafesContainer.appendChild(cafeModal)
 	});

@@ -20,14 +20,22 @@ const restaurantsData = [
 	},
 	{
 		"name": "OSLO STREET FOOD",
-		"location": "Frogner",
+		"location": "Gamle Oslo",
 		"inneservering": true,
 		"uteservering": true,
 		"infoShort": "Med 16 unike matboder serverer vi alle slags deilige retter.",
 		"info": "Med 16 unike matboder serverer vi alle slags deilige retter fra Mexico, Colombia, Hellas, Korea, Japan, India, Hawaii, Thailand og Middelhavet. Matbodene er grundig utvalgt ut fra konsept, evner og kvalitet."
 	},
 	{
-		"name": "restaurant C",
+		"name": "PANE OG VINO",
+		"location": "Gamle Oslo",
+		"inneservering": false,
+		"uteservering": true,
+		"infoShort": "En klassisk italiensk pizzeria, med steinovnspizza slik den skal lages.",
+		"info": "Velkommen til Pane & Vino. En klassisk italiensk pizzeria, med steinovnspizza slik den skal lages. Prøv også våre pastaretter,  salater eller tapas. Du finner oss på Grünerløkka, på hjørnet av Sarsgata/Sofienberggata."
+	},
+	{
+		"name": "MAMMAS PIZZA",
 		"location": "Frogner",
 		"inneservering": false,
 		"uteservering": true,
@@ -35,33 +43,17 @@ const restaurantsData = [
 		"info": "litt info om plass"
 	},
 	{
-		"name": "restaurant D",
-		"location": "Gamle Oslo",
-		"inneservering": true,
+		"name": "SOFIES DATTER",
+		"location": "St. Hanshaugen",
+		"inneservering": false,
 		"uteservering": true,
-		"infoShort": "",
-		"info": "litt info om plass"
+		"infoShort": "Sofies Datter er en nyåpnet restaurant på Bislett.",
+		"info": "Sofies Datter er en nyåpnet restaurant på Bislett. Vi serverer meze  og smakfulle hovedretter fra 16:00-21:30. Hver lørdag har vi lunsj fra kl 12-15"
 	},
 	{
-		"name": "restaurant E",
-		"location": "Gamle Oslo",
-		"inneservering": true,
-		"uteservering": true,
-		"infoShort": "",
-		"info": "litt info om plass"
-	},
-	{
-		"name": "restaurant F",
-		"location": "Gamle Oslo",
-		"inneservering": true,
-		"uteservering": true,
-		"infoShort": "",
-		"info": "litt info om plass"
-	},
-	{
-		"name": "restaurant G",
-		"location": "Gamle Oslo",
-		"inneservering": true,
+		"name": "RIGNES BRYGGHUS",
+		"location": "Grünerløkka",
+		"inneservering": false,
 		"uteservering": true,
 		"infoShort": "",
 		"info": "litt info om plass"

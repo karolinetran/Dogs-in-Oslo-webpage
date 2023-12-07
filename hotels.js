@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-// Informasjon om de ulike hotelenen
+// Information about the different hotels
 const hotelsData = [
 	{
 		"name": "ATT KVADRATUREN",
@@ -54,9 +54,9 @@ const hotelsData = [
 	},
 ];
 
-// Filtreringsfunksjon
+// Filterfunctions
 function filterhotels() {
-	// Importerer alle checkboksene
+		// Imports all the checkboxes from filtermenu
 	const bydelAlnaChecked = document.getElementById('Alna').checked;
 	const bydelBjerkeChecked = document.getElementById('Bjerke').checked;
 	const bydelFrognerChecked = document.getElementById('Frogner').checked;
@@ -73,7 +73,7 @@ function filterhotels() {
 	const bydelVestreAkerChecked = document.getElementById('VestreAker').checked;
 	const bydelOstensjoChecked = document.getElementById('Ostensjo').checked;
 
-	// Sjekker om noen av bydelene er haket av
+	// Checks in any of the districts is checked 
 	const anyDistrictChecked =
 		bydelAlnaChecked || bydelBjerkeChecked || bydelFrognerChecked || bydelGamleOsloChecked ||
 		bydelGrorudChecked || bydelGrünerløkkaChecked || bydelNordreAkerChecked || bydelNordstrandChecked ||
