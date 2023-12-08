@@ -1,14 +1,14 @@
 const restaurantsContainer = document.getElementById('restaurants-container');
 const filterForm = document.getElementById('filter');
 
-//Laster inn restaurantne når siden lastes inn og legger EventListner på filteret
+//Loads the cafees on loading the page and add eventListener to the filter
 document.addEventListener('DOMContentLoaded', function () {
 	displayrestaurants(restaurantsData);
 	filterForm.addEventListener('change', filterRestaurants);
 
 });
 
-// Informasjon om de ulike restaurantenen
+// Information about the different restaurants
 const restaurantsData = [
 	{
 		"name": "SF BREAD BOWL",
@@ -60,9 +60,9 @@ const restaurantsData = [
 	}
 ];
 
-// Filtreringsfunksjon
+// Filterfunctions
 function filterRestaurants() {
-	// Importerer alle checkboksene
+	// Imports all the checkboxes from filtermenu
 	const innserveringChecked = document.getElementById('innservering').checked;
 	const uteserveringChecked = document.getElementById('uteservering').checked;
 	const bydelAlnaChecked = document.getElementById('Alna').checked;
@@ -81,14 +81,14 @@ function filterRestaurants() {
 	const bydelVestreAkerChecked = document.getElementById('VestreAker').checked;
 	const bydelOstensjoChecked = document.getElementById('Ostensjo').checked;
 
-	// Sjekker om noen av bydelene er haket av
+	// Checks in any of the districts is checked 
 	const anyDistrictChecked =
 		bydelAlnaChecked || bydelBjerkeChecked || bydelFrognerChecked || bydelGamleOsloChecked ||
 		bydelGrorudChecked || bydelGrünerløkkaChecked || bydelNordreAkerChecked || bydelNordstrandChecked ||
 		bydelSageneChecked || bydelStHanshaugenChecked || bydelStovnerChecked || bydelSondreNordstrandChecked ||
 		bydelUllernChecked || bydelVestreAkerChecked || bydelOstensjoChecked;
 
-	// Filtrerer restaurantene basert på inneservering, uteservering og bydel
+	 // Filters the cafees based on indoor service, outdoor service and loation
 	const filteredrestaurants = restaurantsData.filter(restaurant =>
 		(innserveringChecked ? restaurant.inneservering : true) &&
 		(uteserveringChecked ? restaurant.uteservering : true) &&
@@ -114,23 +114,23 @@ function filterRestaurants() {
 			!anyDistrictChecked
 		)
 	);
-	// Viser frem de filtrerte kafeene			
+	// Displays the filtered restaurants		
 	displayrestaurants(filteredrestaurants);
 }
 
-// Funksjon for å vise restaurantene
+// Function to show the restaurants
 function displayrestaurants(restaurants) {
-	restaurantsContainer.innerHTML = ''; // Fjerner tidligere elementer
+	restaurantsContainer.innerHTML = ''; // Removes the previous elements 
 
 	restaurants.forEach(restaurant => {
-		// Lager ny div for hver restaurant
+		// Makes a new div for each restaurant
 		const restaurantDiv = document.createElement('div');
 		const restaurantModal = document.createElement('div');
-		restaurantDiv.className = 'option-box'; // Legger på classen "option-box"
+		restaurantDiv.className = 'option-box'; // Adds the class "option-box""
 		restaurantModal.className = "info-modal";
 		restaurantModal.id = `${restaurant.name}`;
 
-		// Legger til innholdet i den nye diven
+		// Adds the content in the new div
 		restaurantDiv.innerHTML = `
 		<a href="#${restaurant.name}">
 			<img src="assets/imgs/restaurants.jpg" class="option-box-img">
@@ -150,7 +150,7 @@ function displayrestaurants(restaurants) {
 			</div>
 		</a>
 		`;
-
+		// Creates the modal for the restaurant
 		restaurantModal.innerHTML = `
 		<a class="close-modal" href="#"></a>
 			<div>
@@ -161,7 +161,7 @@ function displayrestaurants(restaurants) {
 			</div>
 		`;
 
-		// Legger den nye diven i restaurantsContainer
+		// Adds in the new div and modal in the restaurantsContainer
 		restaurantsContainer.appendChild(restaurantDiv);
 		restaurantsContainer.appendChild(restaurantModal)
 	});

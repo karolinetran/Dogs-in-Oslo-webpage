@@ -1,7 +1,7 @@
 const hotelsContainer = document.getElementById('hotels-container');
 const filterForm = document.getElementById('filter');
 
-//Laster inn hotelne når siden lastes inn og legger EventListner på filteret
+//Loads the hotelss on loading the page and add eventListener to the filter
 document.addEventListener('DOMContentLoaded', function () {
 	displayhotels(hotelsData);
 	filterForm.addEventListener('change', filterhotels);
@@ -80,7 +80,7 @@ function filterhotels() {
 		bydelSageneChecked || bydelStHanshaugenChecked || bydelStovnerChecked || bydelSondreNordstrandChecked ||
 		bydelUllernChecked || bydelVestreAkerChecked || bydelOstensjoChecked;
 
-	// Filtrerer hotelene basert på inneservering, uteservering og bydel
+	// Filters the hotels based on loation
 	const filteredhotels = hotelsData.filter(hotel =>
 	(
 		(
@@ -104,23 +104,23 @@ function filterhotels() {
 		!anyDistrictChecked
 	)
 	);
-	// Viser frem de filtrerte kafeene			
+	// Displays the filtered hotels	
 	displayhotels(filteredhotels);
 }
 
-// Funksjon for å vise hotelene
+// Function to show the hotels
 function displayhotels(hotels) {
-	hotelsContainer.innerHTML = ''; // Fjerner tidligere elementer
+	hotelsContainer.innerHTML = ''; // Removes the previous elements 
 
 	hotels.forEach(hotel => {
-		// Lager ny div for hver hotel
+		// Makes a new div for each hotel
 		const hotelDiv = document.createElement('div');
 		const hotelModal = document.createElement('div');
-		hotelDiv.className = 'option-box'; // Legger på classen "option-box"
+		hotelDiv.className = 'option-box'; // Adds the class "option-box""
 		hotelModal.className = "info-modal";
 		hotelModal.id = `${hotel.name}`;
 
-		// Legger til innholdet i den nye diven
+		// Adds the content in the new div
 		hotelDiv.innerHTML = `
 		<a href="#${hotel.name}">
 			<img src="assets/imgs/hotels/${hotel.name}/1.jpeg" class="option-box-img">
@@ -136,7 +136,7 @@ function displayhotels(hotels) {
 			</div>
 		</a>
 		`;
-
+		// Creates the modal for the hotel
 		hotelModal.innerHTML = `
 		<a class="close-modal" href="#"></a>
 			<div>
@@ -149,7 +149,7 @@ function displayhotels(hotels) {
 			</div>
 		`;
 
-		// Legger den nye diven i hotelsContainer
+		// Adds in the new div and modal in the hotelsContainer
 		hotelsContainer.appendChild(hotelDiv);
 		hotelsContainer.appendChild(hotelModal)
 	});

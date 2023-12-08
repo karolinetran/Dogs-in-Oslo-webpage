@@ -1,7 +1,7 @@
 const cafesContainer = document.getElementById('cafees-container');
 const filterForm = document.getElementById('filter');
 
-//Laster inn cafene når siden lastes inn og legger EventListner på filteret
+//Loads the cafees on loading the page and add eventListener to the filter
 document.addEventListener('DOMContentLoaded', function () {
     displayCafes(cafesData);
 	filterForm.addEventListener('change', filterCafes);
@@ -95,7 +95,7 @@ function filterCafes () {
         bydelSageneChecked || bydelStHanshaugenChecked || bydelStovnerChecked || bydelSondreNordstrandChecked ||
         bydelUllernChecked || bydelVestreAkerChecked || bydelOstensjoChecked;
 
-    // Filtrerer cafeene basert på inneservering, uteservering og bydel
+    // Filters the cafees based on indoor service, outdoor service and loation
 	const filteredCafes = cafesData.filter(cafe =>
 		(innserveringChecked ? cafe.inneservering : true) &&
 		(uteserveringChecked ? cafe.uteservering : true) &&
@@ -170,7 +170,7 @@ function displayCafes(cafes) {
 			</div>
 		`;
 
-		// Adds in the new div and modal in the Cafe Container
+		// Adds in the new div and modal in the cafesContainer
 		cafesContainer.appendChild(cafeDiv);
 		cafesContainer.appendChild(cafeModal)
 	});

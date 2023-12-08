@@ -1,11 +1,15 @@
+
+/* Remove initial marin on body */
 body{
 	margin:0;
 }
+/* Remove initial styling on <a> */
 a{
 	color: inherit; 
 	text-decoration: inherit;
 }
 
+/* Header on main page */
 .header{
 	display: flex;
 	justify-content: center;
@@ -20,7 +24,7 @@ a{
 	font-size: xx-large;
 	letter-spacing: 0.03rem;
 }
-
+/* Footer on main page */
 .footer{
 	width: 90%;
 	background: #9FA8A3;
@@ -44,6 +48,7 @@ a{
 	cursor: pointer;
 }
 
+/* Home button in the hotels, restaurants and cafees pages */
 .home-btn{
 	margin-left: 2rem;
 }
@@ -51,21 +56,8 @@ a{
 	text-decoration: underline;
 	cursor: pointer;
 }
-.main-options-container{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	padding-top: 3%;
-}
 
-.secondary-options-container{
-	margin:2rem;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-  	gap: 20px;
-	z-index:1;
-}
-
+/* Styling of filter menu */
 .filter-and-options-container{
 	display: flex;
 	flex-direction: row;
@@ -82,6 +74,23 @@ a{
 	font-weight: bold;
 }
 
+/* Main options container for the front page */
+.main-options-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding-top: 3%;
+}
+
+/* Secondary options container for restuarants, cafees and hotels pages */
+.secondary-options-container{
+	margin:2rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+  	gap: 20px;
+	z-index:1;
+}
+
 .secondary-options-container .option-box{
 	width:100%;
 	min-height: 45vh;
@@ -94,6 +103,7 @@ a{
 	text-decoration: none;
 }
 
+/* Option Box styling */
 .option-box{
 	padding:0.2rem;
 	border-radius: 0.5rem;
@@ -158,6 +168,8 @@ padding: 0.5rem;
 	cursor: pointer;
 }
 
+/* Modal styling */
+
 .info-modal{
 	background:rgba(0, 0, 0, 0.5);
 	position: absolute;
@@ -209,6 +221,7 @@ padding: 0.5rem;
 	z-index:2;
 }
 
+/* Media query for various screensizes for responsive design */
 @media only screen and (max-width: 1000px) {
 	.secondary-options-container{
 		grid-template-columns: repeat(2, 1fr);
